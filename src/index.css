@@ -1,0 +1,305 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  /* Brand Green Palette based on Logo #13a438 (rgb: 19, 164, 56) */
+  --emerald-main: #13a438;
+  --emerald-hover: #0f882e;
+  --emerald-dark: #0c6923;
+  --emerald-light: #e8f7ec;
+  --emerald-glow: rgba(19, 164, 56, 0.25);
+  
+  --bg-dark: #0b0f19;
+  --card-dark: #111827;
+  --card-border: #1f293d;
+  --text-muted-dark: #9ca3af;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-dark);
+  color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Custom Brand Utility Classes */
+.text-success {
+  color: var(--emerald-main) !important;
+}
+
+.bg-success {
+  background-color: var(--emerald-main) !important;
+}
+
+.border-success {
+  border-color: var(--emerald-main) !important;
+}
+
+.badge-emerald-subtle {
+  background-color: rgba(19, 164, 56, 0.18);
+  color: #13a438;
+  border: 1px solid rgba(19, 164, 56, 0.35);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Header Elements */
+.header-logo-img {
+  max-height: 110px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+.header-right-img {
+  max-height: 270px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  border-bottom-right-radius: 12px;
+}
+
+.header-para {
+  line-height: 1.2;
+}
+
+.green-square-marker {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: var(--emerald-main);
+  border-radius: 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+/* Custom Card Styling */
+.card-labelit {
+  background-color: var(--card-dark);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-labelit:hover {
+  border-color: rgba(19, 164, 56, 0.35);
+}
+
+/* SVG Viewport Preview Container */
+.svg-viewport-card {
+  min-height: 280px;
+  border: 1px solid rgba(19, 164, 56, 0.3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Form Controls & Inputs */
+.form-label-custom {
+  font-weight: 600;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.input-group-custom .form-control {
+  background-color: #1a2234;
+  border: 1px solid var(--card-border);
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 8px 0 0 8px;
+}
+
+.input-group-custom .form-control:focus {
+  background-color: #1a2234;
+  border-color: var(--emerald-main);
+  color: #ffffff;
+  box-shadow: 0 0 0 3px var(--emerald-glow);
+}
+
+.input-group-custom .input-group-text {
+  background-color: #141c2c;
+  border: 1px solid var(--card-border);
+  border-left: none;
+  color: var(--emerald-main);
+  font-weight: 600;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Custom Toggle Buttons */
+.btn-emerald {
+  background-color: var(--emerald-main);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-emerald:hover, .btn-emerald:focus {
+  background-color: var(--emerald-hover);
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--emerald-glow);
+}
+
+.btn-outline-emerald {
+  background-color: transparent;
+  color: var(--emerald-main);
+  border: 1px solid var(--emerald-main);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-emerald:hover {
+  background-color: var(--emerald-main);
+  color: #ffffff;
+  box-shadow: 0 0 10px var(--emerald-glow);
+}
+
+.btn-show-me {
+  background-color: rgba(19, 164, 56, 0.12);
+  color: var(--emerald-main);
+  border: 1px solid rgba(19, 164, 56, 0.3);
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-show-me:hover {
+  background-color: var(--emerald-main);
+  color: #ffffff;
+  border-color: var(--emerald-main);
+}
+
+.btn-show-me.active {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+.btn-show-me.active:hover {
+  background-color: #dc2626;
+}
+
+/* Helper GIF Card Container */
+.gif-helper-card {
+  background-color: #060911;
+  border: 1px solid rgba(19, 164, 56, 0.25);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  animation: fadeInDown 0.25s ease-out forwards;
+}
+
+.gif-helper-img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 6px;
+  border: 1px solid #374151;
+}
+
+/* Pill Selectors */
+.pill-toggle-group {
+  background-color: #1a2234;
+  border-radius: 8px;
+  padding: 3px;
+  display: inline-flex;
+  border: 1px solid var(--card-border);
+}
+
+.pill-toggle-group-sm {
+  padding: 2px;
+}
+
+.pill-toggle-btn {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.pill-toggle-btn-sm {
+  padding: 3px 10px;
+  font-size: 0.78rem;
+}
+
+.pill-toggle-btn.active {
+  background-color: var(--emerald-main);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Link & Page Elements */
+.about-link {
+  color: var(--emerald-main);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.about-link:hover,
+.about-link:focus {
+  color: #22c55e;
+  text-decoration: underline;
+}
+
+.about-text {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #e5e7eb;
+}
+
+.about-app-img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background-color: #060911;
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.btn-lets-start {
+  font-size: 1.45rem;
+  font-weight: 700;
+  padding: 14px 48px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(19, 164, 56, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-lets-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(19, 164, 56, 0.5);
+}
+
